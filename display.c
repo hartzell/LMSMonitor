@@ -39,7 +39,8 @@
 
 ArduiPi_OLED 		display;
 int sleep_divisor	= 1 ;
-int oledType		= OLED_SH1106_I2C_128x64;
+// int oledType		= OLED_SH1106_I2C_128x64;
+int oledType		= OLED_ADAFRUIT_I2C_128x64;
 
 #endif
 

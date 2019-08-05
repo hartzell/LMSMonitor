@@ -110,7 +110,8 @@ int main(int argc, char *argv[]) {
 
 	while (true) {
 
-		actVolume = getActVolume();
+		// actVolume = getActVolume();
+		actVolume = getVolume(&tags[VOLUME]);
 		if (actVolume != lastVolume) {
 			sprintf(buff, "Vol:             %3ld%%", actVolume);
 #ifdef __arm__

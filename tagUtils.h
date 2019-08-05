@@ -27,6 +27,7 @@ char *getTag(const char *tag, char *input, char*output, int outSize);
 char *getQuality(char *input, char*output, int outSize);
 int   isPlaying(char *input);
 long  getMinute(tag *timeTag);
+long  getVolume(tag *volumeTag);
 void  encode(const char *s, char *enc);
 int   decode(const char *s, char *dec);
 

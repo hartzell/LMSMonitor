@@ -228,6 +228,7 @@ tag *initTagStore(void) {
 	tagStore[COMPOSER].name	   = "composer";
 	tagStore[CONDUCTOR].name   = "conductor";
 	tagStore[MODE].name 	   = "mode";
+	tagStore[VOLUME].name 	   = "mixer%20volume";
 
 	for(int i = 0; i < MAXTAG_TYPES; i++) {
 		if ((tagStore[i].tagData = (char *)malloc(MAXTAG_DATA * sizeof(char))) == NULL) {

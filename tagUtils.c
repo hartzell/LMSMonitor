@@ -219,3 +219,11 @@ long getMinute(tag *timeTag) {
 
 	return strtol(timeTag->tagData, NULL, 10);
 }
+
+long getVolume(tag *volumeTag) {
+
+	if (volumeTag == NULL)			{return 0;}
+	if (!volumeTag->valid)			{return 0;}
+
+	return strtol(volumeTag->tagData, NULL, 10);
+}

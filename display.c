@@ -39,8 +39,8 @@
 
 ArduiPi_OLED 		display;
 int sleep_divisor	= 1 ;
-// int oledType		= OLED_SH1106_I2C_128x64;
-int oledType		= OLED_ADAFRUIT_I2C_128x64;
+int oledType		= OLED_SH1106_I2C_128x64;
+// int oledType		= OLED_ADAFRUIT_I2C_128x64;
 
 #endif
 
@@ -65,6 +65,7 @@ int initDisplay(void) {
 
 	display.clearDisplay();			// clears the screen  buffer
 	display.setTextSize(1);
+	display.setBrightness(128);
 	display.setTextColor(WHITE);
 	display.display();				// display it (clear display)
 

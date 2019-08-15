@@ -20,6 +20,14 @@ HEADERS = $(wildcard *.h)
 $(TARGET): $(OBJECTS)
 	$(CC) $(OBJECTS) -Wall $(LIBS) -o $@
 
+TOP = tce_extension
+LMS_DIR = $(TOP)/LMSMonitor
+LMS_BIN_DIR = $(LMS_DIR)/usr/local/bin
+tcz: $(TARGET)
+	mkdir -p $(LMS_BIN_DIR)
+	cp $(TARGET) $(LMS_BIN_DIR)
+	(cd $(TOP); mksquashfs LMSMonitor gh-lmsmonitor.tcz)
+
 clean:
 	-rm -f *.o
 	-rm -f $(TARGET)
